@@ -1,0 +1,100 @@
+/* Stili di base */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Contenitore principale della calcolatrice */
+#calc_container {
+    background-color: #444;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Display */
+#display {
+    background-color: #333;
+    color: #00ff00;
+    font-size: 2em;
+    text-align: right;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+/* Tastiera */
+#keyboard {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+/* Pulsanti generali */
+#keyboard input[type="button"] {
+    font-size: 1.2em;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    transition: opacity 0.2s ease;
+}
+
+/* Pulsanti numerici */
+#keyboard input[type="button"][value="0"],
+#keyboard input[type="button"][value="1"],
+#keyboard input[type="button"][value="2"],
+#keyboard input[type="button"][value="3"],
+#keyboard input[type="button"][value="4"],
+#keyboard input[type="button"][value="5"],
+#keyboard input[type="button"][value="6"],
+#keyboard input[type="button"][value="7"],
+#keyboard input[type="button"][value="8"],
+#keyboard input[type="button"][value="9"] {
+    background-color: #007bff; /* Blu per i numeri */
+}
+
+/* Pulsante di conferma */
+#keyboard input[type="button"][value="Conferma"] {
+    background-color: #28a745; /* Verde per il pulsante di conferma */
+}
+
+/* Pulsante di cancellazione */
+#keyboard input[type="button"][value="AC"] {
+    background-color: #dc3545; /* Rosso per il pulsante AC */
+}
+
+/* Pulsanti operatore */
+#keyboard input[type="button"][value="+"],
+#keyboard input[type="button"][value="-"],
+#keyboard input[type="button"][value="*"],
+#keyboard input[type="button"][value="/"] {
+    background-color: #ff9900; /* Arancione per gli operatori */
+}
+
+/* Effetti hover e focus per i pulsanti */
+#keyboard input[type="button"]:hover,
+#keyboard input[type="button"]:focus {
+    opacity: 0.9;
+    outline: none;
+}
+
+/* Stili responsivi per schermi più piccoli */
+@media (max-width: 300px) {
+    #calc_container {
+        width: 100%;
+        padding: 10px;
+    }
+    #display {
+        font-size: 1.5em;
+        padding: 10px;
+    }
+    #keyboard input[type="button"] {
+
